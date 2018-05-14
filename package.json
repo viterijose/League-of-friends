@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/viterijose/League-of-friends/issues"
   },
-  "homepage": "https://github.com/viterijose/League-of-friends#readme"
+  "homepage": "https://github.com/viterijose/League-of-friends#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
 }
