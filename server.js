@@ -9,3 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var friends = [];//empty array for friend objects
+
+app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "survey.html"));
+  });
