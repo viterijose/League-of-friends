@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 var friends = [];//empty array for friend objects
 
-app.get("/", function(req, res) {
+app.get("/", function(request, res) {
     res.sendFile(path.join(__dirname, "home.html"));
   });
 
