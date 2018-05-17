@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var html = require("./app/routing/htmlRoutes");
+
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -11,8 +11,7 @@ app.use(bodyParser.json());
 
 var friends = [];//empty array for friend objects
 
-var htmlRoutes = new html();
-html();
+require('./app/routing/html-routes.js')(app);
 // app.get("/", function (request, res) {
 //     res.sendFile(path.join(__dirname, "app/public/home.html"));
 // });
