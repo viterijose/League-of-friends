@@ -371,12 +371,12 @@
             }
         };
 
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+        // for (var selector in config) {
+        //     $(selector).chosen(config[selector]);
+        // }
 
         // Capture the form inputs
-        document.getElementById("myBtn").onclick = function (event) {
+        document.getElementById("submit").onclick = function (event) {
             alert("CLICKED!!")
             event.preventDefault();
 
