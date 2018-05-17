@@ -1,4 +1,4 @@
-var friendList = require('/../data/friends.js');
+var friendList = require('../data/friends.js');
 
 module.exports = function (app) {//exporting function that uses a parameter called 'app' which is an express function.
 
