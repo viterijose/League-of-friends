@@ -1,4 +1,4 @@
-var friendList = require('../data/friends.js');
+var friendList = require('/../data/friends.js');
 
 module.exports = function (app) {//exporting function that uses a parameter called 'app' which is an express function.
 
@@ -8,8 +8,8 @@ module.exports = function (app) {//exporting function that uses a parameter call
 
     app.post('/api/friends', function (request, res) {
         var newFriendScores = request.body.scores;//value grabbed from friends.js constructor
-        var scoresArray = [];
-        var friendCount = 0;
+        var scoresArray = [];//arrau for storing scores from current user
+        // var friendCount = 0;
         var bestMatch = 0;
 
         //runs through all current friends in list
