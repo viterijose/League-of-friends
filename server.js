@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 var friends = [];//empty array for friend objects
 
 require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 // app.get("/", function (request, res) {
 //     res.sendFile(path.join(__dirname, "app/public/home.html"));
 // });
