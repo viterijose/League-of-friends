@@ -13,13 +13,6 @@ var friends = [];//empty array for friend objects
 
 require('./app/routing/htmlRoutes.js')(app);
 require('./app/routing/apiRoutes.js')(app);
-// app.get("/", function (request, res) {
-//     res.sendFile(path.join(__dirname, "app/public/home.html"));
-// });
-
-// app.get("/survey", function (req, res) {
-//     res.sendFile(path.join(__dirname, "/app/public/survey.html"));
-// });
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
