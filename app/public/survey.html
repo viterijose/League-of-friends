@@ -376,7 +376,7 @@
         }
 
         // Capture the form inputs
-        $("#submit").on("click", function (event) {
+        document.getElementById("myBtn").onclick = function (event) {
             alert("CLICKED!!")
             event.preventDefault();
 
@@ -432,7 +432,7 @@
             } else {
                 alert("Please fill out all fields before submitting!");
             }
-        });
+        };
     </script>
 
 
