@@ -6,8 +6,8 @@ module.exports = function (app) {//exporting function that uses a parameter call
         res.json(friendList);//return an array of friends
     });
 
-    app.post('/api/friends', function (req, res) {
-        var newFriendScores = req.body.scores;//value grabbed from friends.js constructor
+    app.post('/api/friends', function (request, res) {
+        var newFriendScores = request.body.scores;//value grabbed from friends.js constructor
         var scoresArray = [];
         var friendCount = 0;
         var bestMatch = 0;
