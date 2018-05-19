@@ -35,6 +35,6 @@ module.exports = function (app) {//exporting function that uses a parameter call
         res.json(bff);
 
         //pushes new submission into the friendsList array
-        friendList.push(req.body);
+        friendList.push(request.body);
     });
 }
