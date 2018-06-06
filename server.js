@@ -43,6 +43,11 @@ app.get('/sign-s3', (req, res) => {
         url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
       };
       res.write(JSON.stringify(returnData));
+      console.log(returnData);
       res.end();
     });
+  });
+
+  app.post('/save-details', (req, res) => {
+    // TODO: Read POSTed form data and do something useful
   });
