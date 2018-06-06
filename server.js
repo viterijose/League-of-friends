@@ -4,7 +4,7 @@ var path = require("path");
 var aws = require("aws-sdk");
 
 aws.config.region = 'us-east-2';
-var S3_BUCKET = processn.env.S3_BUCKET;
+var S3_BUCKET = process.env.S3_BUCKET;
 
 var app = express();
 var PORT = process.env.PORT || 3000;//using heroku default port and our local port when testing
