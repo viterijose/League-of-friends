@@ -7,17 +7,16 @@ module.exports = function (app) {//exporting function that uses a parameter call
     });
 
     app.post('/api/friends', function (request, res) {
-        var newFriendScores = request.body.scores;//value grabbed from friends.js constructor
-        var scoresArray = [];//arrau for storing scores from current user
-        // var friendCount = 0;
-        var bestMatch = 0;
+        var newFriendScores = request.body.scores;//value grabbed from survey taken by user constructor
+        var scoresArray = [];//array for storing scores from current user
+        var bestMatch = 0;//the best match for user will be the one with the least difference in scores
 
         //runs through all current friends in list
         for (var i = 0; i < friendList.length; i++) {//runs through the friendlist array
             var scoresDiff = 0;
-            //run through scores to compare friends
+           
             for (var j = 0; j < newFriendScores.length; j++) {
-                scoresDiff += (Math.abs(parseInt(friendList[i].scores[j]) - parseInt(newFriendScores[j])));//algorith for checking match
+                scoresDiff += (Math.abs(parseInt(friendList[i].scores[j]) - parseInt(newFriendScores[j])));//algorithm for checking match
             }
             //push results into scoresArray
             scoresArray.push(scoresDiff);
@@ -32,7 +31,7 @@ module.exports = function (app) {//exporting function that uses a parameter call
 
         //return bestMatch data
         var bff = friendList[bestMatch];
-        res.json(bff);
+        res.json(bff);//send best match back to client
 
         //pushes new submission into the friendsList array
         friendList.push(request.body);
