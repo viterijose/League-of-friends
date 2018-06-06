@@ -84,8 +84,10 @@
       xhr.onreadystatechange = () => {
         if(xhr.readyState === 4){
           if(xhr.status === 200){
+              console.log("Ready for uploading..");
             document.getElementById('preview').src = url;
             document.getElementById('avatar-url').value = url;
+            console.log("URL :"+url);
           }
           else{
             alert('Could not upload file.');
@@ -93,6 +95,7 @@
         }
       };
       xhr.send(file);
+      console.log("File: "+file);
     }
     /*
       Function to get the temporary signed request from the app.
