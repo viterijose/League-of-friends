@@ -112,7 +112,7 @@
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         console.log(xhr.responseText);
-                        var response = JSON.parse(xhr.responseText);
+                        var response = xhr.responseText;
                         uploadFile(file, response.signedRequest, response.url);
                     }
                     else {
